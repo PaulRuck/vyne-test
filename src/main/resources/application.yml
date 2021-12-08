@@ -1,0 +1,24 @@
+server:
+  port: 8081
+  error:
+    include-stacktrace: on_param
+
+management:
+  endpoints:
+    web:
+      base-path: /
+      cors:
+        allowed-origins: "*"
+        allowed-methods:
+          - GET
+          - POST
+          - PATCH
+          - DELETE
+      exposure:
+        - health
+
+spring:
+  security:
+    user:
+      name: username
+      password: password
